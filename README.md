@@ -1,7 +1,7 @@
 # Project setup
 
 Az alkalmazásotok backend prototípusát a [json server](https://www.npmjs.com/package/json-server) fogja kiszolgálni.
-Fontos: globalba kell telepíteni, hogy használni tudjátok. Ehhez segítséget és a sémákat az npm-es dokumentációban találjátok a fenti linken.
+Fontos: globalba kell telepíteni, hogy használni tudjátok. Ehhez segítséget és a sémákat az npm-es dokumentációban találjátok a fenti linken. A projekt rootban lévő db.json-t kell watcholni vele.
 
 
 ## Scriptek
@@ -41,10 +41,12 @@ A feladatotok egy user tracking webalkalmazás elkészítése, ehhez meghatároz
 8. Nincsenek trailing spacek
 9. Mobile first approach
 10. ES6 ahol csak lehetséges és nem szükségtelen.
+11. Dark mode
+12. Accessability features
 
 ## Kommentek
 
-- A db.json file-t betettem gitignore-ba, így minden refreshnél vissza fog állni a tartalma, attól függetlenül hogy mit módosítottatok az apin keresztül rajta. (És nem piszkálni ám közvetlen a file-t, direkt van úgy ahogy 😉)
+- A db.json file változásait ne kommitoljátok!!
 - Az arculat legyen légyszi 2022-es szintű, nyugodtan lehet lopni hasonló célú webappoktól ötleteket
 - Törekedjetek légyszi a minőségre, a cél nem az MVP pontok kipipálása meg a featureset összehányása "csak működjön" alapon, hanem egy olyan app létrehozása ami a szakmai képességeiteket reprezentálja és később akár referenciának is használható a karrieretekben.
 - A munkátokat **saját** gitlab/github/bitbucket repóba töltsétek fel, a commit historyt igyekezzetek tisztán tartani, **lehet**, hogy bele fogok nézni egy-egy commit változásaiba.
