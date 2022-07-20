@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Project setup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Az alkalmazásotok backend prototípusát a [json server](https://www.npmjs.com/package/json-server) fogja kiszolgálni.
+Fontos: globalba kell telepíteni, hogy használni tudjátok. Ehhez segítséget és a sémákat az npm-es dokumentációban találjátok a fenti linken.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Scriptek
 
+### `npm install`
+- Feltelpíti a modul dependencyket (ezzel kezdjétek klónozás/download után)
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
+- Futtatja a devszervert és az appot
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+- futtatja a teszteket
 ### `npm run build`
+- elkészíti a minified prod buildet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## MVP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A feladatotok egy user tracking webalkalmazás elkészítése, ehhez meghatározok egy minimum feature/requirement setet amit tartalmaznia kell:
+1. Az alkalmazás development módban futtatható (`npm start`), compile és runtime error nélkül
+2. A userdata a `db.json`-ből van kiolvasva, megfelelő api layer készítésével
+3. A userek tile VAGY card megjelenítésben vannak listázva, oldalanként 5 darab, paginggel
+4. A userek kezelésére, módosítására rendelkezésre állnak **CRUD** műveletek
+5. Az app általános best practiseknek és konvencióknak megfelelő komponensek implementációja (KISS, DRY, Single responsibility)
+6. A projekt mappaszerkezete jól átlátható, megfelel az általános guideline-oknak (mappánként max 5 file, típus/logikai felosztás)
+7. Minimum UX: a műveletek sikerességéről popup/toast jelez vissza, async calloknál van spinner, törlés előtt van confirmation dialog
+8. SPA approach, az oldal sososem tölt újra csak browser refreshnél.
+9. Nincs leftover console.log
+10. Az alkalmazás életképes mobil nézetben
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Extrák
 
-### `npm run eject`
+1. Typescript használata típusokra, interfészekre
+2. React-redux használata
+3. SCSS preprocesszor használata
+4. Styled komponensek
+5. Unit tesztek írása, fő featuresetek lefedése, 80% körüli line coverage
+6. Animációk (css-ből is elég lehet)
+7. Linter, pre-commit hookba bekötve (husky)
+8. Nincsenek trailing spacek
+9. Mobile first approach
+10. ES6 ahol csak lehetséges és nem szükségtelen.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Kommentek
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- A db.json file-t betettem gitignore-ba, így minden refreshnél vissza fog állni a tartalma, attól függetlenül hogy mit módosítottatok az apin keresztül rajta. (És nem piszkálni ám közvetlen a file-t, direkt van úgy ahogy 😉)
+- Az arculat legyen légyszi 2022-es szintű, nyugodtan lehet lopni hasonló célú webappoktól ötleteket
+- Törekedjetek légyszi a minőségre, a cél nem az MVP pontok kipipálása meg a featureset összehányása "csak működjön" alapon, hanem egy olyan app létrehozása ami a szakmai képességeiteket reprezentálja és később akár referenciának is használható a karrieretekben.
+- A munkátokat **saját** gitlab/github/bitbucket repóba töltsétek fel, a commit historyt igyekezzetek tisztán tartani, **lehet**, hogy bele fogok nézni egy-egy commit változásaiba.
+- A deadline végén ti fogjátok demózni az appot ha elkészültem a review-val.
