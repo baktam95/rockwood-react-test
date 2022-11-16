@@ -1,6 +1,6 @@
 # Project setup
 
-Az alkalmazásotok backend prototípusát a [json server](https://www.npmjs.com/package/json-server) fogja kiszolgálni.
+Az alkalmazásotok backend prototípusát a [json server](https://www.npmjs.com/package/json-server) fogja kiszolgálni. **másik porton kell meghívni, mert különben felülírja!**
 Fontos: globalba kell telepíteni, hogy használni tudjátok. Ehhez segítséget és a sémákat az npm-es dokumentációban találjátok a fenti linken. A projekt rootban lévő db.json-t kell watcholni vele.
 
 
@@ -19,12 +19,12 @@ Fontos: globalba kell telepíteni, hogy használni tudjátok. Ehhez segítséget
 
 A feladatotok egy user tracking webalkalmazás elkészítése, ehhez meghatározok egy minimum feature/requirement setet amit tartalmaznia kell:
 1. Az alkalmazás development módban futtatható (`npm start`), compile és runtime error nélkül
-2. A userdata a `db.json`-ből van kiolvasva, megfelelő api layer készítésével
+2. A userdata a `db.json`-ből van kiolvasva, megfelelő api layer készítésével. ** API mappa(fájl) amiben benne vannak a API hívások 
 3. A userek tile VAGY card megjelenítésben vannak listázva, oldalanként 5 darab, paginggel
 4. A userek kezelésére, módosítására rendelkezésre állnak **CRUD** műveletek
 5. Az app általános best practiseknek és konvencióknak megfelelő komponensek implementációja (KISS, DRY, Single responsibility)
-6. A projekt mappaszerkezete jól átlátható, megfelel az általános guideline-oknak (mappánként max 5 file, típus/logikai felosztás)
-7. Minimum UX: a műveletek sikerességéről popup/toast jelez vissza, async calloknál van spinner, törlés előtt van confirmation dialog
+6. A projekt mappaszerkezete jól átlátható, megfelel az általános guideline-oknak (mappánként max 5 file, típus/logikai felosztás). ** john papa
+7. Minimum UX: a műveletek sikerességéről popup/toast jelez vissza, async calloknál van spinner, törlés előtt van confirmation dialog ** interceptor
 8. SPA approach, az oldal sososem tölt újra csak browser refreshnél.
 9. Nincs leftover console.log
 10. Az alkalmazás életképes mobil nézetben
